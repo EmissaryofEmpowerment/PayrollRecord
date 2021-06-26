@@ -1,12 +1,16 @@
-#ifndef PayRoll_H
-#define PayRoll_H
+#ifndef payroll_record_H
+#define payroll_record_H
 #include <string>
-class PayRoll
+
+class PayRollRecord
 {
 public:
-    PayRoll();
-    PayRoll(double hours, double pay_rate,std::string name);
-    ~PayRoll();
+    PayRollRecord
+    ();
+    PayRollRecord
+    (double hours, double pay_rate,std::string name);
+    ~PayRollRecord
+    ();
     static const double kMinimumWage_;
     static const double kRegularHours_;
     static const double kOvertimeRate_;
@@ -17,6 +21,7 @@ public:
     void set_hours(double hours);
     void set_pay_rate(double pay_rate);
     void set_name(std::string name);
+    double ComputeGross() const;
 private:
     double hours_;
     double pay_rate_;

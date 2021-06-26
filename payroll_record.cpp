@@ -1,26 +1,31 @@
 #include "payroll_record.h"
 #include <string>
 
-PayRoll::PayRoll() : first_name_("it is"), last_name_(" unknown "), pay_rate_(7.5), hours_(0){}
-PayRoll::~PayRoll() {}
-/*
-PayRoll(double hours, double pay_rate,std::string name)
+PayRollRecord::PayRollRecord() : first_name_("it is"), last_name_(" unknown "), pay_rate_(7.5), hours_(0){}
+PayRollRecord::~PayRollRecord() {}
+PayRollRecord::PayRollRecord(double hours, double pay_rate,std::string name)
 {
+    hours_=hours;
+    pay_rate_ = pay_rate;
 
 }
-const double PayRoll::kMinimumWage = 7.25;
-const double PayRoll::kOvertimeRate = 1.5;
-const double PayRoll::kRegularHours = 40;
-
+ /*
+const double PayRollRecord::kMinimumWage = 7.25;
+const double PayRollRecord::kOvertimeRate = 1.5;
+const double PayRollRecord::kRegularHours = 40;
+ 
 double get_hours()
 {
-    return 0.00;
+    return PayRollRecord::
 
 }
+
 double get_pay_rate()
 {
     return 0.00;
 }
+
+
 std::string get_first_name()
 {
     return "I really don't get the point of this method. \r"
@@ -46,9 +51,9 @@ void set_hours(double hours)
 }
 void set_pay_rate(double pay_rate)
 {
-    if (pay_rate < PayRoll::kMinimumWage)
+    if (pay_rate < PayRollRecord::kMinimumWage)
     {
-        pay_rate = PayRoll::kMinimumWage;
+        pay_rate = PayRollRecord::kMinimumWage;
     }
 }
 void set_name(std::string name)
@@ -60,3 +65,8 @@ void set_name(std::string name)
         name.replace((name.find(',')+2), placeHolder.size(), placeHolder); //Starting with the first letter of the first name, then space, then last name
     }
 }*/
+
+ double ComputeGross()
+ {
+    return 0.0;
+ }
