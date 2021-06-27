@@ -1,6 +1,7 @@
 #ifndef payroll_record_H
 #define payroll_record_H
 #include <string>
+#include <fstream>
 
 class PayRollRecord
 {
@@ -20,7 +21,9 @@ public:
     void set_hours(double hours);
     void set_pay_rate(double pay_rate);
     void set_name(std::string name);
-    double ComputeGross() const;
+    double ComputeGross();// const;
+    void WriteData(std::ostream& out);
+    void WriteReport(std::ostream& out);
 private:
     double hours_;
     double pay_rate_;
